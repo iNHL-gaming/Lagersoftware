@@ -4,7 +4,6 @@
 #include <iostream>
 #include <map>
 #include <unordered_map>
-#include <windows.h>
 #include <locale>
 #include <cwchar>
 #include <ctime>
@@ -12,6 +11,7 @@
 #include <string>
 #include <sstream>
 #include <fstream>
+#include <unistd.h>
 
 using namespace std;
 
@@ -21,7 +21,7 @@ int load() {
 	system("color 2f");
 	system("color 0e");
 	cout << "Initialisiere POST <Power on Self Test>";
-	Sleep(1000);
+	sleep(1000);
 	char a = 177, b = 219;
 	cout << "\n\n\n\t\t\t\t\tLoading...";
 	cout << "\n\n\n";
@@ -29,17 +29,17 @@ int load() {
 
 	for (int i = 0; i <= 25; i++)
 		cout << a;
-		Sleep(150);
+		sleep(150);
 	cout << "\r";
 	cout << "\t\t\t\t\t";
 	for (int i = 0; i <= 25; i++) {
 		cout << b;
-		Sleep(200);
+		sleep(200);
 	}
 	//system("pause>0")
 
 	system("cls");
-	Sleep(100);
+	sleep(100);
 	return 0;
 }
 
@@ -50,7 +50,7 @@ int finish() {
 	cout << "\n";
 	cout << "POST Abgeschlossen" << endl;
 	cout << "Lade Hashmap..." << endl; 
-	Sleep(500);
+	sleep(500);
 
 	return 0;
 }
@@ -76,7 +76,7 @@ int main()
 		cout << "\t" << cursor->second << "\n" << endl;
 	}
 
-	Sleep(2000);
+	sleep(2000);
 	system("cls");
 
 	string server = "cb15";
@@ -86,7 +86,7 @@ int main()
 	string activate;
 	cout << "Füge deine key.dat in den Selben Ordner ein wie das Programm auch und entferne diesen nicht!" << endl;
 
-	Sleep(600);
+	sleep(600);
 	fstream keyfile;
 	//keyfile.open("key.dat", ios::out);
 	//if (!keyfile) {
@@ -139,7 +139,7 @@ int main()
 			
 			
 			cout << "----\t---" << endl;
-			Sleep(1000);
+			sleep(1000);
 			cout << "Klicke nun [ENTER] um fortzufahren!";
 			system("pause>0");
 		}
